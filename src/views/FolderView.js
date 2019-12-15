@@ -34,33 +34,35 @@ class FolderView extends React.Component {
             <div>
               {this.props.children[i].children.length > 0 &&
                 !this.state.expandCollapseState[i].expand && (
-                  <span>
-                    Test <i className="fa fa-globe"></i>
-                    <input
-                      type="button"
-                      value=">"
-                      onClick={this.toggleExpandCollapse}
-                      data-index={i}
-                    />
-                  </span>
-                )}
-              {this.props.children[i].children.length > 0 &&
-                this.state.expandCollapseState[i].expand && (
-                  <input
-                    type="button"
-                    value="V"
+                  <i
+                    className="fa fa-chevron-right btn-expand"
                     onClick={this.toggleExpandCollapse}
                     data-index={i}
-                  />
+                  ></i>
                 )}
-
-              <strong>{this.props.children[i].name}</strong>
+              {!this.state.expandCollapseState[i].expand && (
+                <i className="fa fa-folder"></i>
+                
+              )}
+              {this.props.children[i].children.length > 0 &&
+                this.state.expandCollapseState[i].expand && (
+                  <span>
+                    <i
+                      className="fa fa-chevron-down btn-expand"
+                      onClick={this.toggleExpandCollapse}
+                      data-index={i}
+                    ></i>
+                    <i class="fa fa-folder-open"></i>
+                  </span>
+                )}
+              <strong> {this.props.children[i].name}</strong>
               {this.state.expandCollapseState[i].expand && (
                 <FolderView children={this.props.children[i].children} />
               )}
+              {this.props.children[i].children.length == 0 && <span className="txt-empty-folder" > (Empty folder)</span>}
             </div>
           ) : (
-            <span>{this.props.children[i].name}</span>
+            <span><i class="fa fa-file-text-o"></i> {this.props.children[i].name}</span>
           )}
         </li>
       );

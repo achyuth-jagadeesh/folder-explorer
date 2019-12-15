@@ -3,7 +3,18 @@
 }
 
 ul{
-  text-align:left
+  text-align:left;
+  list-style-type: none;
 }
 
+
+.btn-expand{
+  padding:3px;
+  cursor: pointer;
+}
+
+.txt-empty-folder{
+  font-style: italic;
+  font-size: 14px;
+}
 
