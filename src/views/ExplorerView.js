@@ -9,7 +9,7 @@ class ExplorerComponent extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     var data = [{"type":"folder","name":"haptic","children":[{"type":"file","name":"ram.mpeg","size":45523}]},{"type":"folder","name":"bluetooth","children":[{"type":"folder","name":"online","children":[{"type":"folder","name":"online","children":[]},{"type":"file","name":"savings_account_applications_olive.png","size":37864},{"type":"folder","name":"virtual","children":[{"type":"folder","name":"cross-platform","children":[]},{"type":"file","name":"eyeballs.png","size":75269},{"type":"file","name":"money_market_account.mp4v","size":30246},{"type":"folder","name":"mobile","children":[]}]},{"type":"folder","name":"redundant","children":[]},{"type":"file","name":"east_caribbean_dollar_solution.m2v","size":41558}]},{"type":"file","name":"e_markets_web_services_best_of_breed.htm","size":64257}]}];
     this.addExpandFlag(data);
     this.setState({folders:data});
