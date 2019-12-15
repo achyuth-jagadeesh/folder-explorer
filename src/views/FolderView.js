@@ -42,7 +42,6 @@ class FolderView extends React.Component {
                 )}
               {!this.state.expandCollapseState[i].expand && (
                 <i className="fa fa-folder"></i>
-                
               )}
               {this.props.children[i].children.length > 0 &&
                 this.state.expandCollapseState[i].expand && (
@@ -59,10 +58,14 @@ class FolderView extends React.Component {
               {this.state.expandCollapseState[i].expand && (
                 <FolderView children={this.props.children[i].children} />
               )}
-              {this.props.children[i].children.length == 0 && <span className="txt-empty-folder" > (Empty folder)</span>}
+              {this.props.children[i].children.length == 0 && (
+                <span className="txt-empty-folder"> (Empty folder)</span>
+              )}
             </div>
           ) : (
-            <span><i class="fa fa-file-text-o"></i> {this.props.children[i].name}</span>
+            <span>
+              <i class="fa fa-file-text-o"></i> {this.props.children[i].name}
+            </span>
           )}
         </li>
       );

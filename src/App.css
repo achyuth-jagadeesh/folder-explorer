@@ -1,20 +1,21 @@
-.App {
-  text-align: center;
-}
 
-ul{
-  text-align:left;
+
+ul {
   list-style-type: none;
 }
 
-
-.btn-expand{
-  padding:3px;
+.btn-expand {
+  padding: 3px;
   cursor: pointer;
 }
 
-.txt-empty-folder{
+.txt-empty-folder {
   font-style: italic;
   font-size: 14px;
 }
 
+
+.files-detl{
+  border-top:1px solid #cacaca;
+  padding-left:40px;
+}
