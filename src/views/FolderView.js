@@ -64,7 +64,7 @@ class FolderView extends React.Component {
             </div>
           ) : (
             <span>
-              <i class="fa fa-file-text-o"></i> {this.props.children[i].name}
+              <i className="fa fa-file-text-o"></i> {this.props.children[i].name} {"   "+ Math.round(this.props.children[i].size / 1024)} MB 
             </span>
           )}
         </li>
